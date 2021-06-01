@@ -9,7 +9,9 @@ public class SpringDi {
         context.refresh();
         StartUI ui = context.getBean(StartUI.class);
         ui.add(ui.enterText());
-        ui.add(ui.enterText());
         ui.print();
+        StartUI another = context.getBean(StartUI.class);
+        another.add(another.enterText());
+        another.print();
     }
 }
